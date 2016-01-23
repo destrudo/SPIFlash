@@ -1288,7 +1288,7 @@ bool SPIFlash::writeByteArray(uint32_t address, uint8_t *data_buffer, uint16_t b
 	if (!errorCheck)
 		return true;
 	else
-		return _writeErrorCheck(address, data_buffer);
+		return _writeErrorCheck(address, *data_buffer);
 }
 // Variant B
 bool SPIFlash::writeByteArray(uint16_t page_number, uint8_t offset, uint8_t *data_buffer, uint16_t bufferSize, bool errorCheck) {
@@ -1334,7 +1334,7 @@ bool SPIFlash::writeCharArray(uint32_t address, char *data_buffer, uint16_t buff
 	if (!errorCheck)
 		return true;
 	else
-		return _writeErrorCheck(address, data_buffer);
+		return _writeErrorCheck(address, *data_buffer);
 }
 // Variant B
 bool SPIFlash::writeCharArray(uint16_t page_number, uint8_t offset, char *data_buffer, uint16_t bufferSize, bool errorCheck) {
